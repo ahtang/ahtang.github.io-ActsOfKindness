@@ -223,8 +223,9 @@ window.onclick = function(event) {
 <script>
   $.getJSON('articles.json',function(jd){
     console.log('It worked!');
+	console.log(jd.goal);
     $('#stage').html('<p id = "top_page"><b>You have reached' + jd.goal + 'of your goal. Good Work!<b></p>');
-  
+	
   });
  </script>
  
