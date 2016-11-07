@@ -140,8 +140,14 @@ span.psw {
     <![endif]-->
 
 </head>
-
-<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<body onload="document.getElementById('id01').style.display='block'" style="width:auto;">
+<!--script>
+function myFunction() {
+    console.log("works");
+    $(.container #login).show();
+}
+</script-->
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -159,24 +165,16 @@ span.psw {
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="add.html">Add Act of Kindness</a>
-                    </li>
-                    <li>
-                        <a href="history.html">Check History</a>
-                    </li>
-                    <li>
-                        <a href="settings.html">Edit Goal</a>
-                    </li>
+                    
                     <li>
                     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
                     <div id="id01" class="modal">
-                    <form class="modal-content animate" action="history.html">
+                    <form class="modal-content animate" action="index2.html">
                     <div class="imgcontainer">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                     <!--img src="img_avatar2.png" alt="Avatar" class="avatar"-->
                     </div>
-                    <div class="container">
+                    <div class="container" id="login">
                     <label><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="uname" required>
                     <label><b>Password</b></label>
@@ -207,30 +205,15 @@ window.onclick = function(event) {
 
     <!-- Page Content -->
     <div class="container">
-<div class="row">
-            <div class="col-lg-12 text-center">     
-            <p><b>This table will represent data read from the JSON file</b></p>
-			<p><b>Look at all the kind things you have done. Good job!</b></p>
-             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
-
-     
         <div class="row">
             <div class="col-lg-12 text-center">
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-
-			
-<script>
-  $.getJSON('articles.json',function(jd){
-    console.log('It worked!');
-	console.log(jd.goal);
-    $('#stage').html('<p id = "top_page"><b>You have reached' + jd.goal + 'of your goal. Good Work!<b></p>');
-  });
- </script>
- 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+            <p id = "top_page"><b>Please login!</b></p>
+      <div id = "stage">
+      </div>
+                <img src="img/100p.png" alt="heart" style="width:480px;height:420px;">
                 
-                <img src="img/heart.png" alt="heart" style="width:480px;height:420px;">
-                <p id = "top_page2"><b>10/20 Acts of Kindness completed.<b></p>
             </div>
         </div>
         <!-- /.row -->
